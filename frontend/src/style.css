@@ -108,17 +108,23 @@ html {
   gap: 12px;
 }
 
-.logo-circle {
-  background: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+.aboutLogoContainer {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  transform: translateY(5px);
+}
+
+.aboutLogo {
   border-radius: 50%;
-  color: var(--primary);
-  display: grid;
-  font-size: 12px;
-  font-weight: 600;
-  height: 44px;
-  place-items: center;
-  width: 44px;
+  height: 50px;
+  object-fit: cover;
+  width: 50px;
+}
+
+.aboutLogoText {
+  color: black;
+  font-size: 1.2rem;
 }
 
 .nav {
@@ -233,14 +239,14 @@ main.container {
   filter: drop-shadow(0 0 0 transparent);
 }
 
-.insights-grid {
+.species-grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.insights-empty {
+.species-empty {
   color: var(--muted);
   margin: 24px 0;
   text-align: center;
@@ -530,10 +536,89 @@ main.container {
   text-transform: uppercase;
 }
 
-.copyright {
-  color: #c8ffdf;
-  font-size: 12px;
-  margin: 0 auto;
-  max-width: 1100px;
-  padding: 16px 20px 28px;
+/* Species Page */
+
+.side-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+}
+
+.side-modal.active {
+  display: block;
+  opacity: 1;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.modal-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+  padding: 40px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.side-modal.active .modal-panel {
+  transform: translateX(0);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+
+.modal-header-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.scientific-name {
+  color: #666;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Rich Text Styling */
+.modal-rich-text h3 {
+  color: var(--brand-700, #2e7d32);
+  margin-top: 25px;
+  font-size: 1.1rem;
+}
+
+.modal-rich-text ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.modal-rich-text li {
+  margin-bottom: 5px;
 }
