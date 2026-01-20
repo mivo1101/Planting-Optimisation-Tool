@@ -68,6 +68,7 @@ From the `frontend` directory:
 ---
 
 ## Contentful SDK for CMS of Species Information
+
 This project uses [Contentful](https://www.contentful.com/) as a headless CMS to store and retrieve **Species Information**, including fields:
 
 - Name
@@ -79,9 +80,10 @@ This project uses [Contentful](https://www.contentful.com/) as a headless CMS to
 This enables easy keyword searching and displays the relevant species information cards in the Species page.
 
 ## Configuration
+
 1.  Copy `.env.example` to a new file named `.env`.
     ```bash
     cp .env.example .env
     ```
 2.  Fill in the `VITE_SPACE_ID` and `VITE_ACCESS_TOKEN` values in the `.env` file.
-    *(Ask the project lead or check the secure handover notes for these credentials)*.
+    _(Please ask the project lead or check the secure handover notes for these credentials)_.
