@@ -108,6 +108,19 @@ html {
   gap: 12px;
 }
 
+.logo-circle {
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  color: var(--primary);
+  display: grid;
+  font-size: 12px;
+  font-weight: 600;
+  height: 44px;
+  place-items: center;
+  width: 44px;
+}
+
 .aboutLogoContainer {
   align-items: center;
   display: flex;
@@ -120,11 +133,6 @@ html {
   height: 50px;
   object-fit: cover;
   width: 50px;
-}
-
-.aboutLogoText {
-  color: black;
-  font-size: 1.2rem;
 }
 
 .nav {

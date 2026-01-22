@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Species | Planting Optimisation Tool</title>
+    <title>Agroforestry Recommendation | Planting Optimisation Tool</title>
   </head>
 
   <body>
@@ -23,11 +23,11 @@
           >
           <a
             href="/recommendation.html"
-            class="nav-link"
+            class="nav-link active"
             data-page="recommendation"
             >Agroforestry Recommendation</a
           >
-          <a href="/species.html" class="nav-link active" data-page="species"
+          <a href="/species.html" class="nav-link" data-page="species"
             >Species</a
           >
         </nav>
@@ -35,35 +35,7 @@
       </div>
     </header>
 
-    <main class="container species-container">
-      <section class="hero species-hero">
-        <h1>Species Information</h1>
-        <p>Understanding Your Species</p>
-      </section>
-
-      <section class="species-search">
-        <label class="search-label" for="speciesSearch">Search Species</label>
-        <div class="search-row">
-          <input
-            id="speciesSearch"
-            class="search-input"
-            type="search"
-            placeholder="Enter keywords here"
-          />
-          <button id="speciesSearchBtn" class="search-btn" type="button">
-            <span class="search-icon">🔍</span>
-            <span>Search</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="species-list" aria-label="Articles">
-        <div id="speciesArticles" class="species-grid"></div>
-        <div id="speciesEmpty" class="species-empty" hidden>
-          No species match your search. Try different keywords.
-        </div>
-      </section>
-    </main>
+    <main></main>
 
     <footer class="site-footer">
       <div class="footer-inner">
@@ -93,6 +65,6 @@
       </div>
     </footer>
 
-    <script type="module" src="/src/species.ts"></script>
+    <script type="module" src="/src/recommendation.ts"></script>
   </body>
 </html>
